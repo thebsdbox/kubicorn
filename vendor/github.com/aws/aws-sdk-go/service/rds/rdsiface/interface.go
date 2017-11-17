@@ -21,7 +21,7 @@ import (
 //
 // The best way to use this interface is so the SDK's service client's calls
 // can be stubbed out for unit testing your code with the SDK without needing
-// to inject custom request handlers into the the SDK's request pipeline.
+// to inject custom request handlers into the SDK's request pipeline.
 //
 //    // myFunc uses an SDK service client to make a request to
 //    // Amazon Relational Database Service.
@@ -344,6 +344,10 @@ type RDSAPI interface {
 	DescribeSourceRegionsWithContext(aws.Context, *rds.DescribeSourceRegionsInput, ...request.Option) (*rds.DescribeSourceRegionsOutput, error)
 	DescribeSourceRegionsRequest(*rds.DescribeSourceRegionsInput) (*request.Request, *rds.DescribeSourceRegionsOutput)
 
+	DescribeValidDBInstanceModifications(*rds.DescribeValidDBInstanceModificationsInput) (*rds.DescribeValidDBInstanceModificationsOutput, error)
+	DescribeValidDBInstanceModificationsWithContext(aws.Context, *rds.DescribeValidDBInstanceModificationsInput, ...request.Option) (*rds.DescribeValidDBInstanceModificationsOutput, error)
+	DescribeValidDBInstanceModificationsRequest(*rds.DescribeValidDBInstanceModificationsInput) (*request.Request, *rds.DescribeValidDBInstanceModificationsOutput)
+
 	DownloadDBLogFilePortion(*rds.DownloadDBLogFilePortionInput) (*rds.DownloadDBLogFilePortionOutput, error)
 	DownloadDBLogFilePortionWithContext(aws.Context, *rds.DownloadDBLogFilePortionInput, ...request.Option) (*rds.DownloadDBLogFilePortionOutput, error)
 	DownloadDBLogFilePortionRequest(*rds.DownloadDBLogFilePortionInput) (*request.Request, *rds.DownloadDBLogFilePortionOutput)
@@ -472,6 +476,12 @@ type RDSAPI interface {
 
 	WaitUntilDBInstanceDeleted(*rds.DescribeDBInstancesInput) error
 	WaitUntilDBInstanceDeletedWithContext(aws.Context, *rds.DescribeDBInstancesInput, ...request.WaiterOption) error
+
+	WaitUntilDBSnapshotAvailable(*rds.DescribeDBSnapshotsInput) error
+	WaitUntilDBSnapshotAvailableWithContext(aws.Context, *rds.DescribeDBSnapshotsInput, ...request.WaiterOption) error
+
+	WaitUntilDBSnapshotDeleted(*rds.DescribeDBSnapshotsInput) error
+	WaitUntilDBSnapshotDeletedWithContext(aws.Context, *rds.DescribeDBSnapshotsInput, ...request.WaiterOption) error
 }
 
 var _ RDSAPI = (*rds.RDS)(nil)

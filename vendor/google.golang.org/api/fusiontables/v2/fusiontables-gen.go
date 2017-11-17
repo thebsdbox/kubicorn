@@ -188,20 +188,20 @@ type Bucket struct {
 }
 
 func (s *Bucket) MarshalJSON() ([]byte, error) {
-	type noMethod Bucket
-	raw := noMethod(*s)
+	type NoMethod Bucket
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
 func (s *Bucket) UnmarshalJSON(data []byte) error {
-	type noMethod Bucket
+	type NoMethod Bucket
 	var s1 struct {
 		Max     gensupport.JSONFloat64 `json:"max"`
 		Min     gensupport.JSONFloat64 `json:"min"`
 		Opacity gensupport.JSONFloat64 `json:"opacity"`
-		*noMethod
+		*NoMethod
 	}
-	s1.noMethod = (*noMethod)(s)
+	s1.NoMethod = (*NoMethod)(s)
 	if err := json.Unmarshal(data, &s1); err != nil {
 		return err
 	}
@@ -304,8 +304,8 @@ type Column struct {
 }
 
 func (s *Column) MarshalJSON() ([]byte, error) {
-	type noMethod Column
-	raw := noMethod(*s)
+	type NoMethod Column
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -338,8 +338,8 @@ type ColumnBaseColumn struct {
 }
 
 func (s *ColumnBaseColumn) MarshalJSON() ([]byte, error) {
-	type noMethod ColumnBaseColumn
-	raw := noMethod(*s)
+	type NoMethod ColumnBaseColumn
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -381,8 +381,8 @@ type ColumnList struct {
 }
 
 func (s *ColumnList) MarshalJSON() ([]byte, error) {
-	type noMethod ColumnList
-	raw := noMethod(*s)
+	type NoMethod ColumnList
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -414,8 +414,8 @@ type Geometry struct {
 }
 
 func (s *Geometry) MarshalJSON() ([]byte, error) {
-	type noMethod Geometry
-	raw := noMethod(*s)
+	type NoMethod Geometry
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -450,8 +450,8 @@ type Import struct {
 }
 
 func (s *Import) MarshalJSON() ([]byte, error) {
-	type noMethod Import
-	raw := noMethod(*s)
+	type NoMethod Import
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -481,8 +481,8 @@ type Line struct {
 }
 
 func (s *Line) MarshalJSON() ([]byte, error) {
-	type noMethod Line
-	raw := noMethod(*s)
+	type NoMethod Line
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -524,18 +524,18 @@ type LineStyle struct {
 }
 
 func (s *LineStyle) MarshalJSON() ([]byte, error) {
-	type noMethod LineStyle
-	raw := noMethod(*s)
+	type NoMethod LineStyle
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
 func (s *LineStyle) UnmarshalJSON(data []byte) error {
-	type noMethod LineStyle
+	type NoMethod LineStyle
 	var s1 struct {
 		StrokeOpacity gensupport.JSONFloat64 `json:"strokeOpacity"`
-		*noMethod
+		*NoMethod
 	}
-	s1.noMethod = (*noMethod)(s)
+	s1.NoMethod = (*NoMethod)(s)
 	if err := json.Unmarshal(data, &s1); err != nil {
 		return err
 	}
@@ -569,8 +569,8 @@ type Point struct {
 }
 
 func (s *Point) MarshalJSON() ([]byte, error) {
-	type noMethod Point
-	raw := noMethod(*s)
+	type NoMethod Point
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -602,8 +602,8 @@ type PointStyle struct {
 }
 
 func (s *PointStyle) MarshalJSON() ([]byte, error) {
-	type noMethod PointStyle
-	raw := noMethod(*s)
+	type NoMethod PointStyle
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -633,8 +633,8 @@ type Polygon struct {
 }
 
 func (s *Polygon) MarshalJSON() ([]byte, error) {
-	type noMethod Polygon
-	raw := noMethod(*s)
+	type NoMethod Polygon
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -687,19 +687,19 @@ type PolygonStyle struct {
 }
 
 func (s *PolygonStyle) MarshalJSON() ([]byte, error) {
-	type noMethod PolygonStyle
-	raw := noMethod(*s)
+	type NoMethod PolygonStyle
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
 func (s *PolygonStyle) UnmarshalJSON(data []byte) error {
-	type noMethod PolygonStyle
+	type NoMethod PolygonStyle
 	var s1 struct {
 		FillOpacity   gensupport.JSONFloat64 `json:"fillOpacity"`
 		StrokeOpacity gensupport.JSONFloat64 `json:"strokeOpacity"`
-		*noMethod
+		*NoMethod
 	}
-	s1.noMethod = (*noMethod)(s)
+	s1.NoMethod = (*NoMethod)(s)
 	if err := json.Unmarshal(data, &s1); err != nil {
 		return err
 	}
@@ -744,8 +744,8 @@ type Sqlresponse struct {
 }
 
 func (s *Sqlresponse) MarshalJSON() ([]byte, error) {
-	type noMethod Sqlresponse
-	raw := noMethod(*s)
+	type NoMethod Sqlresponse
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -789,8 +789,8 @@ type StyleFunction struct {
 }
 
 func (s *StyleFunction) MarshalJSON() ([]byte, error) {
-	type noMethod StyleFunction
-	raw := noMethod(*s)
+	type NoMethod StyleFunction
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -826,19 +826,19 @@ type StyleFunctionGradient struct {
 }
 
 func (s *StyleFunctionGradient) MarshalJSON() ([]byte, error) {
-	type noMethod StyleFunctionGradient
-	raw := noMethod(*s)
+	type NoMethod StyleFunctionGradient
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
 func (s *StyleFunctionGradient) UnmarshalJSON(data []byte) error {
-	type noMethod StyleFunctionGradient
+	type NoMethod StyleFunctionGradient
 	var s1 struct {
 		Max gensupport.JSONFloat64 `json:"max"`
 		Min gensupport.JSONFloat64 `json:"min"`
-		*noMethod
+		*NoMethod
 	}
-	s1.noMethod = (*noMethod)(s)
+	s1.NoMethod = (*NoMethod)(s)
 	if err := json.Unmarshal(data, &s1); err != nil {
 		return err
 	}
@@ -872,18 +872,18 @@ type StyleFunctionGradientColors struct {
 }
 
 func (s *StyleFunctionGradientColors) MarshalJSON() ([]byte, error) {
-	type noMethod StyleFunctionGradientColors
-	raw := noMethod(*s)
+	type NoMethod StyleFunctionGradientColors
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
 func (s *StyleFunctionGradientColors) UnmarshalJSON(data []byte) error {
-	type noMethod StyleFunctionGradientColors
+	type NoMethod StyleFunctionGradientColors
 	var s1 struct {
 		Opacity gensupport.JSONFloat64 `json:"opacity"`
-		*noMethod
+		*NoMethod
 	}
-	s1.noMethod = (*noMethod)(s)
+	s1.NoMethod = (*NoMethod)(s)
 	if err := json.Unmarshal(data, &s1); err != nil {
 		return err
 	}
@@ -941,8 +941,8 @@ type StyleSetting struct {
 }
 
 func (s *StyleSetting) MarshalJSON() ([]byte, error) {
-	type noMethod StyleSetting
-	raw := noMethod(*s)
+	type NoMethod StyleSetting
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -984,8 +984,8 @@ type StyleSettingList struct {
 }
 
 func (s *StyleSettingList) MarshalJSON() ([]byte, error) {
-	type noMethod StyleSettingList
-	raw := noMethod(*s)
+	type NoMethod StyleSettingList
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -1056,8 +1056,8 @@ type Table struct {
 }
 
 func (s *Table) MarshalJSON() ([]byte, error) {
-	type noMethod Table
-	raw := noMethod(*s)
+	type NoMethod Table
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -1096,8 +1096,8 @@ type TableList struct {
 }
 
 func (s *TableList) MarshalJSON() ([]byte, error) {
-	type noMethod TableList
-	raw := noMethod(*s)
+	type NoMethod TableList
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -1143,8 +1143,8 @@ type Task struct {
 }
 
 func (s *Task) MarshalJSON() ([]byte, error) {
-	type noMethod Task
-	raw := noMethod(*s)
+	type NoMethod Task
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -1185,8 +1185,8 @@ type TaskList struct {
 }
 
 func (s *TaskList) MarshalJSON() ([]byte, error) {
-	type noMethod TaskList
-	raw := noMethod(*s)
+	type NoMethod TaskList
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -1241,8 +1241,8 @@ type Template struct {
 }
 
 func (s *Template) MarshalJSON() ([]byte, error) {
-	type noMethod Template
-	raw := noMethod(*s)
+	type NoMethod Template
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -1284,8 +1284,8 @@ type TemplateList struct {
 }
 
 func (s *TemplateList) MarshalJSON() ([]byte, error) {
-	type noMethod TemplateList
-	raw := noMethod(*s)
+	type NoMethod TemplateList
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -1504,7 +1504,7 @@ func (c *ColumnGetCall) Do(opts ...googleapi.CallOption) (*Column, error) {
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -1642,7 +1642,7 @@ func (c *ColumnInsertCall) Do(opts ...googleapi.CallOption) (*Column, error) {
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -1796,7 +1796,7 @@ func (c *ColumnListCall) Do(opts ...googleapi.CallOption) (*ColumnList, error) {
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -1964,7 +1964,7 @@ func (c *ColumnPatchCall) Do(opts ...googleapi.CallOption) (*Column, error) {
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -2107,7 +2107,7 @@ func (c *ColumnUpdateCall) Do(opts ...googleapi.CallOption) (*Column, error) {
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -2274,7 +2274,7 @@ func (c *QuerySqlCall) Do(opts ...googleapi.CallOption) (*Sqlresponse, error) {
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -2454,7 +2454,7 @@ func (c *QuerySqlGetCall) Do(opts ...googleapi.CallOption) (*Sqlresponse, error)
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -2713,7 +2713,7 @@ func (c *StyleGetCall) Do(opts ...googleapi.CallOption) (*StyleSetting, error) {
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -2852,7 +2852,7 @@ func (c *StyleInsertCall) Do(opts ...googleapi.CallOption) (*StyleSetting, error
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -3006,7 +3006,7 @@ func (c *StyleListCall) Do(opts ...googleapi.CallOption) (*StyleSettingList, err
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -3174,7 +3174,7 @@ func (c *StylePatchCall) Do(opts ...googleapi.CallOption) (*StyleSetting, error)
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -3318,7 +3318,7 @@ func (c *StyleUpdateCall) Do(opts ...googleapi.CallOption) (*StyleSetting, error
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -3459,7 +3459,7 @@ func (c *TableCopyCall) Do(opts ...googleapi.CallOption) (*Table, error) {
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -3697,7 +3697,7 @@ func (c *TableGetCall) Do(opts ...googleapi.CallOption) (*Table, error) {
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -3731,16 +3731,12 @@ func (c *TableGetCall) Do(opts ...googleapi.CallOption) (*Table, error) {
 // method id "fusiontables.table.importRows":
 
 type TableImportRowsCall struct {
-	s                *Service
-	tableId          string
-	urlParams_       gensupport.URLParams
-	media_           io.Reader
-	mediaBuffer_     *gensupport.MediaBuffer
-	mediaType_       string
-	mediaSize_       int64 // mediaSize, if known.  Used only for calls to progressUpdater_.
-	progressUpdater_ googleapi.ProgressUpdater
-	ctx_             context.Context
-	header_          http.Header
+	s          *Service
+	tableId    string
+	urlParams_ gensupport.URLParams
+	mediaInfo_ *gensupport.MediaInfo
+	ctx_       context.Context
+	header_    http.Header
 }
 
 // ImportRows: Imports more rows into a table.
@@ -3799,12 +3795,7 @@ func (c *TableImportRowsCall) StartLine(startLine int64) *TableImportRowsCall {
 // supplied.
 // At most one of Media and ResumableMedia may be set.
 func (c *TableImportRowsCall) Media(r io.Reader, options ...googleapi.MediaOption) *TableImportRowsCall {
-	opts := googleapi.ProcessMediaOptions(options)
-	chunkSize := opts.ChunkSize
-	if !opts.ForceEmptyContentType {
-		r, c.mediaType_ = gensupport.DetermineContentType(r, opts.ContentType)
-	}
-	c.media_, c.mediaBuffer_ = gensupport.PrepareUpload(r, chunkSize)
+	c.mediaInfo_ = gensupport.NewInfoFromMedia(r, options)
 	return c
 }
 
@@ -3819,11 +3810,7 @@ func (c *TableImportRowsCall) Media(r io.Reader, options ...googleapi.MediaOptio
 // supersede any context previously provided to the Context method.
 func (c *TableImportRowsCall) ResumableMedia(ctx context.Context, r io.ReaderAt, size int64, mediaType string) *TableImportRowsCall {
 	c.ctx_ = ctx
-	rdr := gensupport.ReaderAtToReader(r, size)
-	rdr, c.mediaType_ = gensupport.DetermineContentType(rdr, mediaType)
-	c.mediaBuffer_ = gensupport.NewMediaBuffer(rdr, googleapi.DefaultUploadChunkSize)
-	c.media_ = nil
-	c.mediaSize_ = size
+	c.mediaInfo_ = gensupport.NewInfoFromResumableMedia(r, size, mediaType)
 	return c
 }
 
@@ -3832,7 +3819,7 @@ func (c *TableImportRowsCall) ResumableMedia(ctx context.Context, r io.ReaderAt,
 // not slow down the upload operation. This should only be called when
 // using ResumableMedia (as opposed to Media).
 func (c *TableImportRowsCall) ProgressUpdater(pu googleapi.ProgressUpdater) *TableImportRowsCall {
-	c.progressUpdater_ = pu
+	c.mediaInfo_.SetProgressUpdater(pu)
 	return c
 }
 
@@ -3872,27 +3859,16 @@ func (c *TableImportRowsCall) doRequest(alt string) (*http.Response, error) {
 	var body io.Reader = nil
 	c.urlParams_.Set("alt", alt)
 	urls := googleapi.ResolveRelative(c.s.BasePath, "tables/{tableId}/import")
-	if c.media_ != nil || c.mediaBuffer_ != nil {
+	if c.mediaInfo_ != nil {
 		urls = strings.Replace(urls, "https://www.googleapis.com/", "https://www.googleapis.com/upload/", 1)
-		protocol := "multipart"
-		if c.mediaBuffer_ != nil {
-			protocol = "resumable"
-		}
-		c.urlParams_.Set("uploadType", protocol)
+		c.urlParams_.Set("uploadType", c.mediaInfo_.UploadType())
 	}
 	if body == nil {
 		body = new(bytes.Buffer)
 		reqHeaders.Set("Content-Type", "application/json")
 	}
-	if c.media_ != nil {
-		combined, ctype := gensupport.CombineBodyMedia(body, "application/json", c.media_, c.mediaType_)
-		defer combined.Close()
-		reqHeaders.Set("Content-Type", ctype)
-		body = combined
-	}
-	if c.mediaBuffer_ != nil && c.mediaType_ != "" {
-		reqHeaders.Set("X-Upload-Content-Type", c.mediaType_)
-	}
+	body, cleanup := c.mediaInfo_.UploadRequest(reqHeaders, body)
+	defer cleanup()
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
@@ -3928,20 +3904,10 @@ func (c *TableImportRowsCall) Do(opts ...googleapi.CallOption) (*Import, error) 
 	if err := googleapi.CheckResponse(res); err != nil {
 		return nil, err
 	}
-	if c.mediaBuffer_ != nil {
-		loc := res.Header.Get("Location")
-		rx := &gensupport.ResumableUpload{
-			Client:    c.s.client,
-			UserAgent: c.s.userAgent(),
-			URI:       loc,
-			Media:     c.mediaBuffer_,
-			MediaType: c.mediaType_,
-			Callback: func(curr int64) {
-				if c.progressUpdater_ != nil {
-					c.progressUpdater_(curr, c.mediaSize_)
-				}
-			},
-		}
+	rx := c.mediaInfo_.ResumableUpload(res.Header.Get("Location"))
+	if rx != nil {
+		rx.Client = c.s.client
+		rx.UserAgent = c.s.userAgent()
 		ctx := c.ctx_
 		if ctx == nil {
 			ctx = context.TODO()
@@ -3962,7 +3928,7 @@ func (c *TableImportRowsCall) Do(opts ...googleapi.CallOption) (*Import, error) 
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -4039,15 +4005,11 @@ func (c *TableImportRowsCall) Do(opts ...googleapi.CallOption) (*Import, error) 
 // method id "fusiontables.table.importTable":
 
 type TableImportTableCall struct {
-	s                *Service
-	urlParams_       gensupport.URLParams
-	media_           io.Reader
-	mediaBuffer_     *gensupport.MediaBuffer
-	mediaType_       string
-	mediaSize_       int64 // mediaSize, if known.  Used only for calls to progressUpdater_.
-	progressUpdater_ googleapi.ProgressUpdater
-	ctx_             context.Context
-	header_          http.Header
+	s          *Service
+	urlParams_ gensupport.URLParams
+	mediaInfo_ *gensupport.MediaInfo
+	ctx_       context.Context
+	header_    http.Header
 }
 
 // ImportTable: Imports a new table.
@@ -4082,12 +4044,7 @@ func (c *TableImportTableCall) Encoding(encoding string) *TableImportTableCall {
 // supplied.
 // At most one of Media and ResumableMedia may be set.
 func (c *TableImportTableCall) Media(r io.Reader, options ...googleapi.MediaOption) *TableImportTableCall {
-	opts := googleapi.ProcessMediaOptions(options)
-	chunkSize := opts.ChunkSize
-	if !opts.ForceEmptyContentType {
-		r, c.mediaType_ = gensupport.DetermineContentType(r, opts.ContentType)
-	}
-	c.media_, c.mediaBuffer_ = gensupport.PrepareUpload(r, chunkSize)
+	c.mediaInfo_ = gensupport.NewInfoFromMedia(r, options)
 	return c
 }
 
@@ -4102,11 +4059,7 @@ func (c *TableImportTableCall) Media(r io.Reader, options ...googleapi.MediaOpti
 // supersede any context previously provided to the Context method.
 func (c *TableImportTableCall) ResumableMedia(ctx context.Context, r io.ReaderAt, size int64, mediaType string) *TableImportTableCall {
 	c.ctx_ = ctx
-	rdr := gensupport.ReaderAtToReader(r, size)
-	rdr, c.mediaType_ = gensupport.DetermineContentType(rdr, mediaType)
-	c.mediaBuffer_ = gensupport.NewMediaBuffer(rdr, googleapi.DefaultUploadChunkSize)
-	c.media_ = nil
-	c.mediaSize_ = size
+	c.mediaInfo_ = gensupport.NewInfoFromResumableMedia(r, size, mediaType)
 	return c
 }
 
@@ -4115,7 +4068,7 @@ func (c *TableImportTableCall) ResumableMedia(ctx context.Context, r io.ReaderAt
 // not slow down the upload operation. This should only be called when
 // using ResumableMedia (as opposed to Media).
 func (c *TableImportTableCall) ProgressUpdater(pu googleapi.ProgressUpdater) *TableImportTableCall {
-	c.progressUpdater_ = pu
+	c.mediaInfo_.SetProgressUpdater(pu)
 	return c
 }
 
@@ -4155,27 +4108,16 @@ func (c *TableImportTableCall) doRequest(alt string) (*http.Response, error) {
 	var body io.Reader = nil
 	c.urlParams_.Set("alt", alt)
 	urls := googleapi.ResolveRelative(c.s.BasePath, "tables/import")
-	if c.media_ != nil || c.mediaBuffer_ != nil {
+	if c.mediaInfo_ != nil {
 		urls = strings.Replace(urls, "https://www.googleapis.com/", "https://www.googleapis.com/upload/", 1)
-		protocol := "multipart"
-		if c.mediaBuffer_ != nil {
-			protocol = "resumable"
-		}
-		c.urlParams_.Set("uploadType", protocol)
+		c.urlParams_.Set("uploadType", c.mediaInfo_.UploadType())
 	}
 	if body == nil {
 		body = new(bytes.Buffer)
 		reqHeaders.Set("Content-Type", "application/json")
 	}
-	if c.media_ != nil {
-		combined, ctype := gensupport.CombineBodyMedia(body, "application/json", c.media_, c.mediaType_)
-		defer combined.Close()
-		reqHeaders.Set("Content-Type", ctype)
-		body = combined
-	}
-	if c.mediaBuffer_ != nil && c.mediaType_ != "" {
-		reqHeaders.Set("X-Upload-Content-Type", c.mediaType_)
-	}
+	body, cleanup := c.mediaInfo_.UploadRequest(reqHeaders, body)
+	defer cleanup()
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
@@ -4208,20 +4150,10 @@ func (c *TableImportTableCall) Do(opts ...googleapi.CallOption) (*Table, error) 
 	if err := googleapi.CheckResponse(res); err != nil {
 		return nil, err
 	}
-	if c.mediaBuffer_ != nil {
-		loc := res.Header.Get("Location")
-		rx := &gensupport.ResumableUpload{
-			Client:    c.s.client,
-			UserAgent: c.s.userAgent(),
-			URI:       loc,
-			Media:     c.mediaBuffer_,
-			MediaType: c.mediaType_,
-			Callback: func(curr int64) {
-				if c.progressUpdater_ != nil {
-					c.progressUpdater_(curr, c.mediaSize_)
-				}
-			},
-		}
+	rx := c.mediaInfo_.ResumableUpload(res.Header.Get("Location"))
+	if rx != nil {
+		rx.Client = c.s.client
+		rx.UserAgent = c.s.userAgent()
 		ctx := c.ctx_
 		if ctx == nil {
 			ctx = context.TODO()
@@ -4242,7 +4174,7 @@ func (c *TableImportTableCall) Do(opts ...googleapi.CallOption) (*Table, error) 
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -4394,7 +4326,7 @@ func (c *TableInsertCall) Do(opts ...googleapi.CallOption) (*Table, error) {
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -4532,7 +4464,7 @@ func (c *TableListCall) Do(opts ...googleapi.CallOption) (*TableList, error) {
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -4698,7 +4630,7 @@ func (c *TablePatchCall) Do(opts ...googleapi.CallOption) (*Table, error) {
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -4739,16 +4671,12 @@ func (c *TablePatchCall) Do(opts ...googleapi.CallOption) (*Table, error) {
 // method id "fusiontables.table.replaceRows":
 
 type TableReplaceRowsCall struct {
-	s                *Service
-	tableId          string
-	urlParams_       gensupport.URLParams
-	media_           io.Reader
-	mediaBuffer_     *gensupport.MediaBuffer
-	mediaType_       string
-	mediaSize_       int64 // mediaSize, if known.  Used only for calls to progressUpdater_.
-	progressUpdater_ googleapi.ProgressUpdater
-	ctx_             context.Context
-	header_          http.Header
+	s          *Service
+	tableId    string
+	urlParams_ gensupport.URLParams
+	mediaInfo_ *gensupport.MediaInfo
+	ctx_       context.Context
+	header_    http.Header
 }
 
 // ReplaceRows: Replaces rows of an existing table. Current rows remain
@@ -4810,12 +4738,7 @@ func (c *TableReplaceRowsCall) StartLine(startLine int64) *TableReplaceRowsCall 
 // supplied.
 // At most one of Media and ResumableMedia may be set.
 func (c *TableReplaceRowsCall) Media(r io.Reader, options ...googleapi.MediaOption) *TableReplaceRowsCall {
-	opts := googleapi.ProcessMediaOptions(options)
-	chunkSize := opts.ChunkSize
-	if !opts.ForceEmptyContentType {
-		r, c.mediaType_ = gensupport.DetermineContentType(r, opts.ContentType)
-	}
-	c.media_, c.mediaBuffer_ = gensupport.PrepareUpload(r, chunkSize)
+	c.mediaInfo_ = gensupport.NewInfoFromMedia(r, options)
 	return c
 }
 
@@ -4830,11 +4753,7 @@ func (c *TableReplaceRowsCall) Media(r io.Reader, options ...googleapi.MediaOpti
 // supersede any context previously provided to the Context method.
 func (c *TableReplaceRowsCall) ResumableMedia(ctx context.Context, r io.ReaderAt, size int64, mediaType string) *TableReplaceRowsCall {
 	c.ctx_ = ctx
-	rdr := gensupport.ReaderAtToReader(r, size)
-	rdr, c.mediaType_ = gensupport.DetermineContentType(rdr, mediaType)
-	c.mediaBuffer_ = gensupport.NewMediaBuffer(rdr, googleapi.DefaultUploadChunkSize)
-	c.media_ = nil
-	c.mediaSize_ = size
+	c.mediaInfo_ = gensupport.NewInfoFromResumableMedia(r, size, mediaType)
 	return c
 }
 
@@ -4843,7 +4762,7 @@ func (c *TableReplaceRowsCall) ResumableMedia(ctx context.Context, r io.ReaderAt
 // not slow down the upload operation. This should only be called when
 // using ResumableMedia (as opposed to Media).
 func (c *TableReplaceRowsCall) ProgressUpdater(pu googleapi.ProgressUpdater) *TableReplaceRowsCall {
-	c.progressUpdater_ = pu
+	c.mediaInfo_.SetProgressUpdater(pu)
 	return c
 }
 
@@ -4883,27 +4802,16 @@ func (c *TableReplaceRowsCall) doRequest(alt string) (*http.Response, error) {
 	var body io.Reader = nil
 	c.urlParams_.Set("alt", alt)
 	urls := googleapi.ResolveRelative(c.s.BasePath, "tables/{tableId}/replace")
-	if c.media_ != nil || c.mediaBuffer_ != nil {
+	if c.mediaInfo_ != nil {
 		urls = strings.Replace(urls, "https://www.googleapis.com/", "https://www.googleapis.com/upload/", 1)
-		protocol := "multipart"
-		if c.mediaBuffer_ != nil {
-			protocol = "resumable"
-		}
-		c.urlParams_.Set("uploadType", protocol)
+		c.urlParams_.Set("uploadType", c.mediaInfo_.UploadType())
 	}
 	if body == nil {
 		body = new(bytes.Buffer)
 		reqHeaders.Set("Content-Type", "application/json")
 	}
-	if c.media_ != nil {
-		combined, ctype := gensupport.CombineBodyMedia(body, "application/json", c.media_, c.mediaType_)
-		defer combined.Close()
-		reqHeaders.Set("Content-Type", ctype)
-		body = combined
-	}
-	if c.mediaBuffer_ != nil && c.mediaType_ != "" {
-		reqHeaders.Set("X-Upload-Content-Type", c.mediaType_)
-	}
+	body, cleanup := c.mediaInfo_.UploadRequest(reqHeaders, body)
+	defer cleanup()
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
@@ -4939,20 +4847,10 @@ func (c *TableReplaceRowsCall) Do(opts ...googleapi.CallOption) (*Task, error) {
 	if err := googleapi.CheckResponse(res); err != nil {
 		return nil, err
 	}
-	if c.mediaBuffer_ != nil {
-		loc := res.Header.Get("Location")
-		rx := &gensupport.ResumableUpload{
-			Client:    c.s.client,
-			UserAgent: c.s.userAgent(),
-			URI:       loc,
-			Media:     c.mediaBuffer_,
-			MediaType: c.mediaType_,
-			Callback: func(curr int64) {
-				if c.progressUpdater_ != nil {
-					c.progressUpdater_(curr, c.mediaSize_)
-				}
-			},
-		}
+	rx := c.mediaInfo_.ResumableUpload(res.Header.Get("Location"))
+	if rx != nil {
+		rx.Client = c.s.client
+		rx.UserAgent = c.s.userAgent()
 		ctx := c.ctx_
 		if ctx == nil {
 			ctx = context.TODO()
@@ -4973,7 +4871,7 @@ func (c *TableReplaceRowsCall) Do(opts ...googleapi.CallOption) (*Task, error) {
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -5157,7 +5055,7 @@ func (c *TableUpdateCall) Do(opts ...googleapi.CallOption) (*Table, error) {
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -5411,7 +5309,7 @@ func (c *TaskGetCall) Do(opts ...googleapi.CallOption) (*Task, error) {
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -5577,7 +5475,7 @@ func (c *TaskListCall) Do(opts ...googleapi.CallOption) (*TaskList, error) {
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -5863,7 +5761,7 @@ func (c *TemplateGetCall) Do(opts ...googleapi.CallOption) (*Template, error) {
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -6002,7 +5900,7 @@ func (c *TemplateInsertCall) Do(opts ...googleapi.CallOption) (*Template, error)
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -6156,7 +6054,7 @@ func (c *TemplateListCall) Do(opts ...googleapi.CallOption) (*TemplateList, erro
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -6324,7 +6222,7 @@ func (c *TemplatePatchCall) Do(opts ...googleapi.CallOption) (*Template, error) 
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -6468,7 +6366,7 @@ func (c *TemplateUpdateCall) Do(opts ...googleapi.CallOption) (*Template, error)
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil

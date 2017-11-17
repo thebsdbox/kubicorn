@@ -163,8 +163,8 @@ type Checksum struct {
 }
 
 func (s *Checksum) MarshalJSON() ([]byte, error) {
-	type noMethod Checksum
-	raw := noMethod(*s)
+	type NoMethod Checksum
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -197,8 +197,8 @@ type ClientInfo struct {
 }
 
 func (s *ClientInfo) MarshalJSON() ([]byte, error) {
-	type noMethod ClientInfo
-	raw := noMethod(*s)
+	type NoMethod ClientInfo
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -252,8 +252,8 @@ type Constraints struct {
 }
 
 func (s *Constraints) MarshalJSON() ([]byte, error) {
-	type noMethod Constraints
-	raw := noMethod(*s)
+	type NoMethod Constraints
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -287,8 +287,8 @@ type FetchThreatListUpdatesRequest struct {
 }
 
 func (s *FetchThreatListUpdatesRequest) MarshalJSON() ([]byte, error) {
-	type noMethod FetchThreatListUpdatesRequest
-	raw := noMethod(*s)
+	type NoMethod FetchThreatListUpdatesRequest
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -325,8 +325,8 @@ type FetchThreatListUpdatesResponse struct {
 }
 
 func (s *FetchThreatListUpdatesResponse) MarshalJSON() ([]byte, error) {
-	type noMethod FetchThreatListUpdatesResponse
-	raw := noMethod(*s)
+	type NoMethod FetchThreatListUpdatesResponse
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -366,8 +366,8 @@ type FindFullHashesRequest struct {
 }
 
 func (s *FindFullHashesRequest) MarshalJSON() ([]byte, error) {
-	type noMethod FindFullHashesRequest
-	raw := noMethod(*s)
+	type NoMethod FindFullHashesRequest
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -409,8 +409,8 @@ type FindFullHashesResponse struct {
 }
 
 func (s *FindFullHashesResponse) MarshalJSON() ([]byte, error) {
-	type noMethod FindFullHashesResponse
-	raw := noMethod(*s)
+	type NoMethod FindFullHashesResponse
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -440,8 +440,8 @@ type FindThreatMatchesRequest struct {
 }
 
 func (s *FindThreatMatchesRequest) MarshalJSON() ([]byte, error) {
-	type noMethod FindThreatMatchesRequest
-	raw := noMethod(*s)
+	type NoMethod FindThreatMatchesRequest
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -471,8 +471,8 @@ type FindThreatMatchesResponse struct {
 }
 
 func (s *FindThreatMatchesResponse) MarshalJSON() ([]byte, error) {
-	type noMethod FindThreatMatchesResponse
-	raw := noMethod(*s)
+	type NoMethod FindThreatMatchesResponse
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -502,8 +502,8 @@ type ListThreatListsResponse struct {
 }
 
 func (s *ListThreatListsResponse) MarshalJSON() ([]byte, error) {
-	type noMethod ListThreatListsResponse
-	raw := noMethod(*s)
+	type NoMethod ListThreatListsResponse
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -554,7 +554,21 @@ type ListUpdateRequest struct {
 	//   "UNWANTED_SOFTWARE" - Unwanted software threat type.
 	//   "POTENTIALLY_HARMFUL_APPLICATION" - Potentially harmful application
 	// threat type.
+	//   "SOCIAL_ENGINEERING_INTERNAL" - Social engineering threat type for
+	// internal use.
+	//   "API_ABUSE" - API abuse threat type.
 	//   "MALICIOUS_BINARY" - Malicious binary threat type.
+	//   "CSD_WHITELIST" - Client side detection whitelist threat type.
+	//   "CSD_DOWNLOAD_WHITELIST" - Client side download detection whitelist
+	// threat type.
+	//   "CLIENT_INCIDENT" - Client incident threat type.
+	//   "CLIENT_INCIDENT_WHITELIST" - Whitelist used when detecting client
+	// incident threats.
+	// This enum was never launched and should be re-used for the next list.
+	//   "APK_MALWARE_OFFLINE" - List used for offline APK checks in PAM.
+	//   "SUBRESOURCE_FILTER" - Patterns to be used for activating the
+	// subresource filter. Interstitial
+	// will not be shown for patterns from this list.
 	ThreatType string `json:"threatType,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "Constraints") to
@@ -575,8 +589,8 @@ type ListUpdateRequest struct {
 }
 
 func (s *ListUpdateRequest) MarshalJSON() ([]byte, error) {
-	type noMethod ListUpdateRequest
-	raw := noMethod(*s)
+	type NoMethod ListUpdateRequest
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -658,7 +672,21 @@ type ListUpdateResponse struct {
 	//   "UNWANTED_SOFTWARE" - Unwanted software threat type.
 	//   "POTENTIALLY_HARMFUL_APPLICATION" - Potentially harmful application
 	// threat type.
+	//   "SOCIAL_ENGINEERING_INTERNAL" - Social engineering threat type for
+	// internal use.
+	//   "API_ABUSE" - API abuse threat type.
 	//   "MALICIOUS_BINARY" - Malicious binary threat type.
+	//   "CSD_WHITELIST" - Client side detection whitelist threat type.
+	//   "CSD_DOWNLOAD_WHITELIST" - Client side download detection whitelist
+	// threat type.
+	//   "CLIENT_INCIDENT" - Client incident threat type.
+	//   "CLIENT_INCIDENT_WHITELIST" - Whitelist used when detecting client
+	// incident threats.
+	// This enum was never launched and should be re-used for the next list.
+	//   "APK_MALWARE_OFFLINE" - List used for offline APK checks in PAM.
+	//   "SUBRESOURCE_FILTER" - Patterns to be used for activating the
+	// subresource filter. Interstitial
+	// will not be shown for patterns from this list.
 	ThreatType string `json:"threatType,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "Additions") to
@@ -679,8 +707,8 @@ type ListUpdateResponse struct {
 }
 
 func (s *ListUpdateResponse) MarshalJSON() ([]byte, error) {
-	type noMethod ListUpdateResponse
-	raw := noMethod(*s)
+	type NoMethod ListUpdateResponse
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -712,8 +740,8 @@ type MetadataEntry struct {
 }
 
 func (s *MetadataEntry) MarshalJSON() ([]byte, error) {
-	type noMethod MetadataEntry
-	raw := noMethod(*s)
+	type NoMethod MetadataEntry
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -760,8 +788,8 @@ type RawHashes struct {
 }
 
 func (s *RawHashes) MarshalJSON() ([]byte, error) {
-	type noMethod RawHashes
-	raw := noMethod(*s)
+	type NoMethod RawHashes
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -789,8 +817,8 @@ type RawIndices struct {
 }
 
 func (s *RawIndices) MarshalJSON() ([]byte, error) {
-	type noMethod RawIndices
-	raw := noMethod(*s)
+	type NoMethod RawIndices
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -837,8 +865,8 @@ type RiceDeltaEncoding struct {
 }
 
 func (s *RiceDeltaEncoding) MarshalJSON() ([]byte, error) {
-	type noMethod RiceDeltaEncoding
-	raw := noMethod(*s)
+	type NoMethod RiceDeltaEncoding
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -880,8 +908,8 @@ type ThreatEntry struct {
 }
 
 func (s *ThreatEntry) MarshalJSON() ([]byte, error) {
-	type noMethod ThreatEntry
-	raw := noMethod(*s)
+	type NoMethod ThreatEntry
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -911,8 +939,8 @@ type ThreatEntryMetadata struct {
 }
 
 func (s *ThreatEntryMetadata) MarshalJSON() ([]byte, error) {
-	type noMethod ThreatEntryMetadata
-	raw := noMethod(*s)
+	type NoMethod ThreatEntryMetadata
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -969,8 +997,8 @@ type ThreatEntrySet struct {
 }
 
 func (s *ThreatEntrySet) MarshalJSON() ([]byte, error) {
-	type noMethod ThreatEntrySet
-	raw := noMethod(*s)
+	type NoMethod ThreatEntrySet
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -1017,7 +1045,21 @@ type ThreatInfo struct {
 	//   "UNWANTED_SOFTWARE" - Unwanted software threat type.
 	//   "POTENTIALLY_HARMFUL_APPLICATION" - Potentially harmful application
 	// threat type.
+	//   "SOCIAL_ENGINEERING_INTERNAL" - Social engineering threat type for
+	// internal use.
+	//   "API_ABUSE" - API abuse threat type.
 	//   "MALICIOUS_BINARY" - Malicious binary threat type.
+	//   "CSD_WHITELIST" - Client side detection whitelist threat type.
+	//   "CSD_DOWNLOAD_WHITELIST" - Client side download detection whitelist
+	// threat type.
+	//   "CLIENT_INCIDENT" - Client incident threat type.
+	//   "CLIENT_INCIDENT_WHITELIST" - Whitelist used when detecting client
+	// incident threats.
+	// This enum was never launched and should be re-used for the next list.
+	//   "APK_MALWARE_OFFLINE" - List used for offline APK checks in PAM.
+	//   "SUBRESOURCE_FILTER" - Patterns to be used for activating the
+	// subresource filter. Interstitial
+	// will not be shown for patterns from this list.
 	ThreatTypes []string `json:"threatTypes,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "PlatformTypes") to
@@ -1038,8 +1080,8 @@ type ThreatInfo struct {
 }
 
 func (s *ThreatInfo) MarshalJSON() ([]byte, error) {
-	type noMethod ThreatInfo
-	raw := noMethod(*s)
+	type NoMethod ThreatInfo
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -1085,7 +1127,21 @@ type ThreatListDescriptor struct {
 	//   "UNWANTED_SOFTWARE" - Unwanted software threat type.
 	//   "POTENTIALLY_HARMFUL_APPLICATION" - Potentially harmful application
 	// threat type.
+	//   "SOCIAL_ENGINEERING_INTERNAL" - Social engineering threat type for
+	// internal use.
+	//   "API_ABUSE" - API abuse threat type.
 	//   "MALICIOUS_BINARY" - Malicious binary threat type.
+	//   "CSD_WHITELIST" - Client side detection whitelist threat type.
+	//   "CSD_DOWNLOAD_WHITELIST" - Client side download detection whitelist
+	// threat type.
+	//   "CLIENT_INCIDENT" - Client incident threat type.
+	//   "CLIENT_INCIDENT_WHITELIST" - Whitelist used when detecting client
+	// incident threats.
+	// This enum was never launched and should be re-used for the next list.
+	//   "APK_MALWARE_OFFLINE" - List used for offline APK checks in PAM.
+	//   "SUBRESOURCE_FILTER" - Patterns to be used for activating the
+	// subresource filter. Interstitial
+	// will not be shown for patterns from this list.
 	ThreatType string `json:"threatType,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "PlatformType") to
@@ -1106,8 +1162,8 @@ type ThreatListDescriptor struct {
 }
 
 func (s *ThreatListDescriptor) MarshalJSON() ([]byte, error) {
-	type noMethod ThreatListDescriptor
-	raw := noMethod(*s)
+	type NoMethod ThreatListDescriptor
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -1161,7 +1217,21 @@ type ThreatMatch struct {
 	//   "UNWANTED_SOFTWARE" - Unwanted software threat type.
 	//   "POTENTIALLY_HARMFUL_APPLICATION" - Potentially harmful application
 	// threat type.
+	//   "SOCIAL_ENGINEERING_INTERNAL" - Social engineering threat type for
+	// internal use.
+	//   "API_ABUSE" - API abuse threat type.
 	//   "MALICIOUS_BINARY" - Malicious binary threat type.
+	//   "CSD_WHITELIST" - Client side detection whitelist threat type.
+	//   "CSD_DOWNLOAD_WHITELIST" - Client side download detection whitelist
+	// threat type.
+	//   "CLIENT_INCIDENT" - Client incident threat type.
+	//   "CLIENT_INCIDENT_WHITELIST" - Whitelist used when detecting client
+	// incident threats.
+	// This enum was never launched and should be re-used for the next list.
+	//   "APK_MALWARE_OFFLINE" - List used for offline APK checks in PAM.
+	//   "SUBRESOURCE_FILTER" - Patterns to be used for activating the
+	// subresource filter. Interstitial
+	// will not be shown for patterns from this list.
 	ThreatType string `json:"threatType,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "CacheDuration") to
@@ -1182,8 +1252,8 @@ type ThreatMatch struct {
 }
 
 func (s *ThreatMatch) MarshalJSON() ([]byte, error) {
-	type noMethod ThreatMatch
-	raw := noMethod(*s)
+	type NoMethod ThreatMatch
+	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
@@ -1309,7 +1379,7 @@ func (c *EncodedFullHashesGetCall) Do(opts ...googleapi.CallOption) (*FindFullHa
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -1470,7 +1540,7 @@ func (c *EncodedUpdatesGetCall) Do(opts ...googleapi.CallOption) (*FetchThreatLi
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -1604,7 +1674,7 @@ func (c *FullHashesFindCall) Do(opts ...googleapi.CallOption) (*FindFullHashesRe
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -1723,7 +1793,7 @@ func (c *ThreatListUpdatesFetchCall) Do(opts ...googleapi.CallOption) (*FetchThr
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -1847,7 +1917,7 @@ func (c *ThreatListsListCall) Do(opts ...googleapi.CallOption) (*ListThreatLists
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
@@ -1961,7 +2031,7 @@ func (c *ThreatMatchesFindCall) Do(opts ...googleapi.CallOption) (*FindThreatMat
 		},
 	}
 	target := &ret
-	if err := json.NewDecoder(res.Body).Decode(target); err != nil {
+	if err := gensupport.DecodeResponse(target, res); err != nil {
 		return nil, err
 	}
 	return ret, nil
