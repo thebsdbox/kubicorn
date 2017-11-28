@@ -26,6 +26,7 @@ import (
 	"github.com/kris-nova/kubicorn/state/fs"
 	"github.com/kris-nova/kubicorn/state/jsonfs"
 	"github.com/spf13/cobra"
+	cluster2 "github.com/kris-nova/kubicorn/apis/cluster"
 )
 
 type EditOptions struct {
@@ -132,11 +133,12 @@ func RunEdit(options *EditOptions) error {
 		return err
 	}
 
-	cluster, err := stateStore.BytesToCluster(data)
+	kubicornCluster, err := stateStore.BytesToCluster(data)
 	if err != nil {
 		os.Remove(fpath)
 		return err
 	}
+	cluster := kubicornCluster.(*cluster2.Cluster)
 
 	cluster, err = initapi.InitCluster(cluster)
 	if err != nil {

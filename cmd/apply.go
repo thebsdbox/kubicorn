@@ -30,6 +30,7 @@ import (
 	"github.com/kris-nova/kubicorn/state/jsonfs"
 	"github.com/spf13/cobra"
 	"github.com/yuroyoro/swalker"
+	cluster2 "github.com/kris-nova/kubicorn/apis/cluster"
 )
 
 type ApplyOptions struct {
@@ -105,10 +106,16 @@ func RunApply(options *ApplyOptions) error {
 		})
 	}
 
-	cluster, err := stateStore.GetCluster()
+	kubicornCluster, err := stateStore.GetCluster()
 	if err != nil {
 		return fmt.Errorf("Unable to get cluster [%s]: %v", name, err)
 	}
+
+	// TODO We need to type assert here
+	cluster := kubicornCluster.(*cluster2.Cluster)
+
+
+
 	logger.Info("Loaded cluster: %s", cluster.Name)
 
 	if options.Set != "" {

@@ -27,6 +27,7 @@ import (
 	"github.com/kris-nova/kubicorn/state/fs"
 	"github.com/kris-nova/kubicorn/state/jsonfs"
 	"github.com/spf13/cobra"
+	cluster2 "github.com/kris-nova/kubicorn/apis/cluster"
 )
 
 type GetConfigOptions struct {
@@ -99,10 +100,13 @@ func RunGetConfig(options *GetConfigOptions) error {
 		})
 	}
 
-	cluster, err := stateStore.GetCluster()
+	kubicornCluster, err := stateStore.GetCluster()
 	if err != nil {
 		return fmt.Errorf("Unable to get cluster [%s]: %v", name, err)
 	}
+
+	cluster := kubicornCluster.(*cluster2.Cluster)
+
 	logger.Info("Loaded cluster: %s", cluster.Name)
 
 	cluster, err = initapi.InitCluster(cluster)

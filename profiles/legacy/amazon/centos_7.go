@@ -20,10 +20,11 @@ import (
 	"github.com/kris-nova/kubicorn/apis/cluster"
 	"github.com/kris-nova/kubicorn/cutil/kubeadm"
 	"github.com/kris-nova/kubicorn/cutil/uuid"
+	"github.com/kris-nova/kubicorn/apis"
 )
 
 // NewCentosCluster creates a simple CentOS Amazon cluster
-func NewCentosCluster(name string) *cluster.Cluster {
+func NewCentosCluster(name string) apis.KubicornCluster{
 	return &cluster.Cluster{
 		Name:     name,
 		Cloud:    cluster.CloudAmazon,
