@@ -27,6 +27,8 @@ import (
 	"github.com/kris-nova/kubicorn/state/jsonfs"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
+	"k8s.io/kube-deploy/cluster-api/api/cluster/v1alpha1"
+	"github.com/kris-nova/kubicorn/profiles"
 )
 
 type DeleteOptions struct {
@@ -112,9 +114,16 @@ func RunDelete(options *DeleteOptions) error {
 		return fmt.Errorf("Unable to get cluster [%s]: %v", name, err)
 	}
 
-	// TODO We need to type assert here
-	cluster := kubicornCluster.(*cluster2.Cluster)
+	// Translate into an API cluster
+	apiCluster, ok := kubicornCluster.(*v1alpha1.Cluster)
+	if !ok {
+		return fmt.Errorf("unable to unmarshal cluster, major error")
+	}
 
+	cluster, err := profiles.DeserializeProviderConfig(apiCluster.Spec.ProviderConfig)
+	if err != nil {
+		return fmt.Errorf("unable to deserialize provider config: %v", err)
+	}
 
 	runtimeParams := &cutil.RuntimeParameters{}
 

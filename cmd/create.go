@@ -22,17 +22,18 @@ import (
 	"strings"
 	"github.com/kris-nova/kubicorn/cutil/logger"
 	"github.com/kris-nova/kubicorn/cutil/namer"
-	"github.com/kris-nova/kubicorn/profiles/legacy/amazon"
-	"github.com/kris-nova/kubicorn/profiles/legacy/azure"
-	"github.com/kris-nova/kubicorn/profiles/legacy/digitalocean"
+	//"github.com/kris-nova/kubicorn/profiles/legacy/amazon"
+	//"github.com/kris-nova/kubicorn/profiles/legacy/azure"
+	//"github.com/kris-nova/kubicorn/profiles/legacy/digitalocean"
 	newdigitalocean "github.com/kris-nova/kubicorn/profiles/api/digitalocean"
-	"github.com/kris-nova/kubicorn/profiles/legacy/googlecompute"
+	//"github.com/kris-nova/kubicorn/profiles/legacy/googlecompute"
 	"github.com/kris-nova/kubicorn/state"
 	"github.com/kris-nova/kubicorn/state/fs"
 	"github.com/kris-nova/kubicorn/state/jsonfs"
 	"github.com/spf13/cobra"
 	"github.com/yuroyoro/swalker"
 	"github.com/kris-nova/kubicorn/apis"
+	"github.com/kris-nova/kubicorn/profiles/api/amazon"
 )
 
 type CreateOptions struct {
@@ -97,51 +98,51 @@ type profileMap struct {
 }
 
 var profileMapIndexed = map[string]profileMap{
-	"azure": {
-		profileFunc: azure.NewUbuntuCluster,
-		description: "Ubuntu on Azure",
-	},
-	"azure-ubuntu": {
-		profileFunc: azure.NewUbuntuCluster,
-		description: "Ubuntu on Azure",
-	},
-	"amazon": {
-		profileFunc: amazon.NewUbuntuCluster,
-		description: "Ubuntu on Amazon",
-	},
-	"aws": {
-		profileFunc: amazon.NewUbuntuCluster,
-		description: "Ubuntu on Amazon",
-	},
-	"do": {
-		profileFunc: digitalocean.NewUbuntuCluster,
-		description: "Ubuntu on DigitalOcean",
-	},
-	"google": {
-		profileFunc: googlecompute.NewUbuntuCluster,
-		description: "Ubuntu on Google Compute",
-	},
-	"digitalocean": {
-		profileFunc: digitalocean.NewUbuntuCluster,
-		description: "Ubuntu on DigitalOcean",
-	},
-	"do-ubuntu": {
-		profileFunc: digitalocean.NewUbuntuCluster,
-		description: "Ubuntu on DigitalOcean",
-	},
+	//"azure": {
+	//	profileFunc: azure.NewUbuntuCluster,
+	//	description: "Ubuntu on Azure",
+	//},
+	//"azure-ubuntu": {
+	//	profileFunc: azure.NewUbuntuCluster,
+	//	description: "Ubuntu on Azure",
+	//},
+	//"amazon": {
+	//	profileFunc: amazon.NewUbuntuCluster,
+	//	description: "Ubuntu on Amazon",
+	//},
+	//"aws": {
+	//	profileFunc: amazon.NewUbuntuCluster,
+	//	description: "Ubuntu on Amazon",
+	//},
+	//"do": {
+	//	profileFunc: digitalocean.NewUbuntuCluster,
+	//	description: "Ubuntu on DigitalOcean",
+	//},
+	//"google": {
+	//	profileFunc: googlecompute.NewUbuntuCluster,
+	//	description: "Ubuntu on Google Compute",
+	//},
+	//"digitalocean": {
+	//	profileFunc: digitalocean.NewUbuntuCluster,
+	//	description: "Ubuntu on DigitalOcean",
+	//},
+	//"do-ubuntu": {
+	//	profileFunc: digitalocean.NewUbuntuCluster,
+	//	description: "Ubuntu on DigitalOcean",
+	//},
 	"aws-ubuntu": {
 		profileFunc: amazon.NewUbuntuCluster,
 		description: "Ubuntu on Amazon",
 	},
-	"do-centos": {
-		profileFunc: digitalocean.NewCentosCluster,
-		description: "CentOS on DigitalOcean",
-	},
-	"aws-centos": {
-		profileFunc: amazon.NewCentosCluster,
-		description: "CentOS on Amazon",
-	},
-	"new-do-ubuntu": {
+	//"do-centos": {
+	//	profileFunc: digitalocean.NewCentosCluster,
+	//	description: "CentOS on DigitalOcean",
+	//},
+	//"aws-centos": {
+	//	profileFunc: amazon.NewCentosCluster,
+	//	description: "CentOS on Amazon",
+	//},
+	"do-ubuntu": {
 		profileFunc: newdigitalocean.NewUbuntuCluster,
 		description: "New Cluster API Ubuntu on Digital Ocean",
 	},
